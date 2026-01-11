@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Seongbin Park">
+      <h1>Seongbin Park 👋</h1>
+      
+      <p class="bio-text">
+        I am a first-year M.S./Ph.D. student in the <strong>Electrical & Computer Engineering</strong> department at UCLA, where I am a member of the <a href="https://ssysarch.ee.ucla.edu/" target="_blank">Secure Systems and Architectures (SsysArch) Lab</a>. I am fortunate to be advised by <a href="https://ssysarch.ee.ucla.edu/nader/" target="_blank">Professor Nader Sehatbakhsh</a>. My work is supported by the <strong>Eugene V. Cota-Robles Fellowship</strong>.
+      </p>
+
+      <p class="bio-text">
+        My current research focuses on the safety and security of autonomous systems. I am specifically interested in verified approaches to ensure reliability under adversarial or unpredictable environmental conditions. I have also done work in machine learning security, with an emphasis on adversarial image purification and digital media forensics. 
+      </p>
+
+      <div class="tag-container">
+        <span class="tag">Cyber-Physical Systems (CPS)</span>
+        <span class="tag">Adversarial Robustness</span>
+        <span class="tag">Adversarial ML</span>
+      </div>
+
+      <section class="news-section">
+        <h2>Latest News</h2>
+        <div class="news-box">
+            <div class="news-item">
+              <span class="news-date">Aug 2025</span>
+              <span><em>Chimera</em> published in USENIX Security 2025.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Sep 2025</span>
+              <span>Started Ph.D. at UCLA ECE with SsysArch Lab.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Mar 2025</span>
+              <span>Awarded the Eugene V. Cota-Robles Fellowship.</span>
+            </div>
+            <div class="news-item">
+              <span class="news-date">Nov 2024</span>
+              <span><em>LightPure</em> published in MobiCom 2024.</span>
+            </div>
+            <div class="news-item">
+            <span class="news-date">June 2024</span>
+            <span>Graduated with a B.S. in Computer Science from UCLA</span>
+            </div>
+        </div>
+      </section>
+
+      <section class="edu-section">
+        <h2>Education</h2>
+        <div class="edu-timeline">
+          <div class="edu-item">
+            <div class="edu-content">
+              <div class="edu-degree">M.S./Ph.D. in Electrical & Computer Engineering</div>
+              <div class="edu-school">University of California, Los Angeles</div>
+              <div class="edu-detail">Advised by Nader Sehatbakhsh</div>
+            </div>
+            <div class="edu-date">2025 — Present</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-content">
+              <div class="edu-degree">B.S. in Computer Science</div>
+              <div class="edu-school">University of California, Los Angeles</div>
+            </div>
+            <div class="edu-date">2020 — 2024</div>
+          </div>
+      </div>
+    </section>
+</Layout>
+
+<style>
+  .bio-text {
+    line-height: 1.8;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .bio-text a {
+    color: var(--ucla-blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 2.5rem 0;
+  }
+
+  .tag {
+    background: #f0f7ff;
+    color: #2774AE;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #ddecff;
+    white-space: nowrap;
+  }
+
+  .news-box {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 12px;
+  }
+
+  .news-item {
+    display: flex;
+    gap: 3rem;
+    margin-top: 1.2rem;
+    align-items: baseline;
+  }
+
+  .news-date {
+    font-weight: 800;
+    color: var(--ucla-blue);
+    min-width: 100px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  .edu-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .edu-item {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  .edu-item::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 30px;
+    bottom: -1.5rem;
+    width: 2px;
+    background: #6191cfff;
+  }
+
+  .edu-item:last-child::before { display: none; }
+
+  .edu-item::after {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--ucla-blue);
+  }
+
+  .edu-degree { font-weight: 700; font-size: 1.3rem; margin-bottom: 0.4rem; color: #111; }
+  .edu-school { color: #444; font-size: 1.1rem; }
+  .edu-detail { font-size: 1rem; color: var(--text-muted); margin-top: 0.3rem; }
+  .edu-date { font-family: monospace; color: var(--text-muted); font-size: 1rem; font-weight: 500; }
+
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 850px) {
+    .edu-item { flex-direction: column; gap: 0.5rem; padding-bottom: 1rem; }
+    .edu-date { text-align: left; }
+  }
+</style>

@@ -1,0 +1,92 @@
+---
+---
+<div class="left-column">
+  <img src="/profile.svg" alt="Seongbin Park" class="profile-picture" />
+  
+  <div class="contact-links">
+  <a href="mailto:&#112;&#97;&#114;&#107;&#115;&#101;&#111;&#110;&#103;&#98;&#105;&#110;&#64;&#117;&#99;&#108;&#97;&#46;&#101;&#100;&#117;" class="contact-btn" title="Email" aria-label="Email Seongbin Park">
+      <img src="/icons/email.svg" alt="Email" class="contact-icon" />
+      <span>Email</span>
+    </a>
+    <a href="https://github.com/se0ngbin" target="_blank" class="contact-btn">
+      <img src="/icons/github.svg" alt="GitHub" class="contact-icon" />
+      <span>GitHub</span>
+    </a>
+    <a href="https://linkedin.com/in/seongbeanie" target="_blank" class="contact-btn">
+      <img src="/icons/linkedin.svg" alt="LinkedIn" class="contact-icon" />
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://scholar.google.com/citations?user=P2nTstoAAAAJ" target="_blank" class="contact-btn">
+      <img src="/icons/scholar.svg" alt="Scholar" class="contact-icon" />
+      <span>Scholar</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  :root {
+    --ucla-blue: #2774AE;
+    --text-main: #222;
+    --border-color: #eee;
+  }
+
+  .left-column {
+    flex: 0 0 260px;
+    text-align: center;
+  }
+
+  .profile-picture {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--ucla-blue);
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 0.75rem 1.2rem;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .contact-btn:hover {
+    border-color: var(--ucla-blue);
+    color: var(--ucla-blue);
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(39, 116, 174, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (max-width: 850px) {
+    .left-column { 
+      flex: 1 1 100%; 
+    }
+    .contact-links {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>

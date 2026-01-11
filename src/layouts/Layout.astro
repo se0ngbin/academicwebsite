@@ -1,0 +1,252 @@
+---
+import Sidebar from '../components/Sidebar.astro';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Seongbin</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header style="position: sticky; top: 0; z-index: 1000; background: var(--color-background);">
+			<nav>
+				<a href="/">Home</a>
+				<a href="/research">Publications</a>
+				<a href="/cv">CV</a>
+				<a href="/contact">Contact</a>
+				<a href="https://blog.seongbin.me">Blog</a>
+			</nav>
+		</header>
+		<main>
+			<div class="page-container">
+				<Sidebar />
+				<div class="right-column">
+					<slot />
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="social-links">
+        <a href="https://github.com/se0ngbin" target="_blank" title="GitHub">
+          <img src="/icons/github.svg" alt="GitHub" />
+        </a>
+        <a href="https://linkedin.com/in/seongbeanie" target="_blank" title="LinkedIn">
+          <img src="/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://scholar.google.com/citations?user=P2nTstoAAAAJ" target="_blank" title="Scholar">
+          <img src="/icons/scholar.svg" alt="Scholar" />
+        </a>
+			</div>
+			<p>&copy; 2026 Seongbin Park.</p>
+		</footer>
+	</body>
+</html>
+
+<style>
+	:root {
+		--font-family-sans: 'Inter', sans-serif;
+		--font-size-base: 1rem;
+		--line-height-base: 1.5;
+		--color-text: #333;
+		--color-background: #fff;
+		--color-primary: #3245ff;
+		--color-secondary: #bc52ee;
+		--color-border: #eee;
+		--color-footer-bg: #f9f9f9;
+		--ucla-blue: #2774AE;
+		--text-main: #222;
+		--text-muted: #555;
+		--bg-light: #fcfcfc;
+		--border-color: #eee;
+	}
+
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		font-family: var(--font-family-sans);
+		font-size: var(--font-size-base);
+		line-height: var(--line-height-base);
+		color: var(--color-text);
+		background-color: var(--color-background);
+	}
+
+	main {
+		max-width: 1250px;
+		margin: 0 auto;
+		padding: 2rem;
+		min-height: calc(100vh - 10rem);
+	}
+
+	header {
+		display: flex;
+		justify-content: center;
+		padding: 1.5rem;
+		border-bottom: 1px solid var(--color-border);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	}
+
+	nav {
+		display: flex;
+		gap: 2rem;
+	}
+
+	nav a {
+		text-decoration: none;
+		color: var(--color-text);
+		font-weight: 700;
+		transition: color 0.2s;
+	}
+
+	nav a:hover {
+		color: var(--color-primary);
+	}
+
+	nav a[href*="blog"] {
+		color: var(--ucla-blue);
+	}
+
+	nav a[href*="blog"]:hover {
+		color: var(--color-primary);
+	}
+
+	footer {
+		text-align: center;
+		padding: 2rem;
+		background-color: var(--color-footer-bg);
+		border-top: 1px solid var(--color-border);
+	}
+
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.social-links a {
+		font-size: 1.5rem;
+		text-decoration: none;
+		color: var(--color-text);
+		transition: transform 0.2s;
+	}
+
+	.social-links a:hover {
+		transform: scale(1.1);
+	}
+
+	.button {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border-radius: 9999px;
+		background: linear-gradient(83.21deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+		color: white;
+		text-decoration: none;
+		font-weight: 700;
+		transition: transform 0.2s;
+	}
+
+	.button:hover {
+		transform: scale(1.05);
+	}
+
+	.card {
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		padding: 1.5rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+		transition: box-shadow 0.2s, transform 0.2s;
+	}
+
+	.card:hover {
+		box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+		transform: translateY(-2px);
+	}
+
+	.form-control {
+		width: 100%;
+		padding: 0.75rem;
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		font-family: var(--font-family-sans);
+		font-size: var(--font-size-base);
+		margin-bottom: 1rem;
+		box-sizing: border-box;
+	}
+
+	.form-control:focus {
+		outline: none;
+		border-color: var(--color-primary);
+		box-shadow: 0 0 0 2px rgba(50, 69, 255, 0.2);
+	}
+
+	.contact-icon {
+		width: 18px;
+		height: 18px;
+	}
+
+	.social-links a img {
+		width: 24px;
+		height: 24px;
+		transition: transform 0.2s;
+	}
+
+		.social-links a:hover img {
+			transform: scale(1.1);
+		}
+
+	.page-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5rem;
+		padding: 4rem;
+	}
+
+	.right-column {
+		flex: 1;
+	}
+
+	/* Typography - Shared across all pages (use :global for slotted content) */
+	.right-column :global(h1) { 
+		font-size: 3rem; 
+		margin: 0 0 1.5rem 0; 
+		color: #111; 
+		letter-spacing: -0.02em; 
+	}
+	
+	.right-column :global(h2) { 
+		font-size: 1.75rem; 
+		border-bottom: 2px solid var(--ucla-blue); 
+		padding-bottom: 0.5rem; 
+		margin: 3.5rem 0 1.5rem 0;
+		color: #111;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1024px) {
+		.main-wrapper { width: 95%; }
+		.page-container { gap: 3rem; }
+	}
+
+	@media (max-width: 850px) {
+		.page-container {
+		padding: 1rem;
+		}
+		.left-column { 
+		flex: 1 1 100%; 
+		}
+		.contact-links {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		}
+		.right-column :global(h1) { font-size: 2.5rem; text-align: center; }
+	}
+</style>

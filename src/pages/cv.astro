@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <h1>Curriculum Vitae</h1>
+  
+  <div class="cv-actions">
+    <a href="/cv.pdf" class="button view-cv" target="_blank" rel="noopener noreferrer" title="View CV (opens in new tab)">
+      <span>View CV</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 21H3V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <a href="/cv.pdf" class="button download-cv" download="Seongbin_Park_CV.pdf" title="Download CV">
+      <span>Download CV</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="7 10 12 15 17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="cv-embed">
+    <iframe src="/cv.pdf" title="Curriculum Vitae"></iframe>
+  </div>
+</Layout>
+
+<style>
+  .cv-actions {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Buttons styled like tags */
+  .cv-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #f0f7ff;
+    color: #2774AE;
+    border: 1px solid #ddecff;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  }
+
+  .cv-actions .button svg {
+    display: inline-block;
+    color: inherit;
+  }
+
+  .cv-actions .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(39,116,174,0.08);
+  }
+
+  .cv-embed {
+    width: 100%;
+    min-height: 85vh;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+
+  .cv-embed iframe {
+    display: block;
+    width: 100%;
+    height: 85vh;
+    border: none;
+  }
+
+  @media (max-width: 850px) {
+    .cv-embed,
+    .cv-embed iframe {
+      min-height: 70vh;
+      height: 70vh;
+    }
+  }
+</style>

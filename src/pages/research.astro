@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <h1>Publications</h1>
+
+  <h2>2025</h2>
+  <ul class="publications">
+    <li class="pub-item">
+      <span class="pub-title">Chimera: Creating Digitally Signed Fake Photos by Fooling Image Recapture and Deepfake Detectors</span><br />
+      <span class="pub-authors"><strong>S. Park</strong>, A. Vilesov, J. Zhang, H. Khalili, Y. Tian, A. Kadambi, N. Sehatbakhsh</span><br />
+      <span class="pub-venue">USENIX Security Symposium, 2025</span>
+      <span class="pub-links">
+        <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/park">[Paper]</a>
+        <a href="https://github.com/ssysarch/Chimera">[Code]</a>
+      </span>
+    </li>
+    <li class="pub-item">
+      <span class="pub-title">SuperPure: Robust and Efficient Purification of Localized and Distributed Adversarial Patches via Super-Resolution GAN Models</span><br />
+      <span class="pub-authors">H. Khalili, <strong>S. Park</strong>, V. Bollapragada, N. Sehatbakhsh</span><br />
+      <span class="pub-venue"><em>Under review</em></span>
+      <span class="pub-links">
+        <a href="https://arxiv.org/abs/2505.16318">[Paper]</a>
+      </span>
+    </li>
+  </ul>
+
+  <h2>2024</h2>
+  <ul class="publications">
+    <li class="pub-item">
+      <span class="pub-title">LightPure: Realtime Adversarial Image Purification for Mobile Devices Using Diffusion Models</span><br />
+      <span class="pub-authors">H. Khalili, <strong>S. Park</strong>, V. Li, B. Bright, A. Payani, R. Kompella, N. Sehatbakhsh</span><br />
+      <span class="pub-venue">ACM MobiCom, 2024</span>
+      <span class="pub-links">
+        <a href="https://arxiv.org/abs/2409.00340">[Paper]</a>
+        <a href="https://github.com/ssysarch/LightPure">[Code]</a>
+      </span>
+    </li>
+  </ul>
+</Layout>
+
+<style>
+  .publications {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+  }
+
+  .pub-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--ucla-blue);
+    line-height: 1.6;
+  }
+
+  .pub-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #111;
+  }
+
+  .pub-authors {
+    font-size: 0.95rem;
+    color: #444;
+  }
+
+  .pub-venue {
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  .pub-links {
+    margin-left: 0.5rem;
+  }
+
+  .pub-links a {
+    color: var(--ucla-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
+
+  .pub-links a:hover {
+    text-decoration: underline;
+  }
+</style>
