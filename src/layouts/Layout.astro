@@ -6,9 +6,13 @@ import Sidebar from '../components/Sidebar.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+		<link rel="manifest" href="/favicon/site.webmanifest" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Seongbin</title>
+		<title>Seongbin Park</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -81,7 +85,6 @@ import Sidebar from '../components/Sidebar.astro';
 	main {
 		max-width: 1250px;
 		margin: 0 auto;
-		padding: 2rem;
 		min-height: calc(100vh - 10rem);
 	}
 
@@ -206,7 +209,7 @@ import Sidebar from '../components/Sidebar.astro';
 		display: flex;
 		flex-wrap: wrap;
 		gap: 5rem;
-		padding: 4rem;
+		padding: 5rem;
 	}
 
 	.right-column {
